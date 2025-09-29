@@ -48,16 +48,10 @@ pytest tests/         # Run unit tests
 Inside Container:
 
 # Build the container
+#docker
 docker build -t router-location-links .
-podman build -t router-location-links .
-
-# Run main application
-docker run --rm router-location-links
-podman run --rm router-location-links
-
-# Run tests
-docker run --rm -e PYTHONPATH=/app router-location-links pytest
-podman run --rm -e PYTHONPATH=/app router-location-links pytest
+docker run -itd router-location-links
+docker exec -it "id"/bin/bash
 
 
 Dependencies
