@@ -1,5 +1,5 @@
 import pytest
-from main import build_location_map, build_router_map, compute_location_router_links
+from .. main import build_location_map, build_router_map, compute_location_router_links
 
 def test_build_location_map():
     locations = [{"id": 1, "name": "A"}, {"id": 2, "name": "B"}]
