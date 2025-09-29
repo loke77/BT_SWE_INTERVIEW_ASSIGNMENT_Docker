@@ -48,10 +48,12 @@ pytest tests/         # Run unit tests
 Inside Container:
 
 # Build the container
-#docker
-docker build -t router-location-links .
-docker run -itd router-location-links
-docker exec -it "id"/bin/bash
+#docker  
+docker build -t router-location-links .  
+docker run -itd router-location-links  
+docker exec -it "id" /bin/bash  
+python main.py  
+pytest
 
 
 Dependencies
