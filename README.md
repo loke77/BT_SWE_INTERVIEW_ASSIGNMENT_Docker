@@ -9,7 +9,6 @@ Unit tests for key functions in tests/test_main.py.
 
 Containerized setup for reproducible execution and testing.
 
-Key Points for the Interviewer
 
 **Solution Approach**
 
@@ -31,8 +30,6 @@ Containerized execution ensures consistent environment.
 
 Containerization
 
-Dockerfile works with both Docker and Podman.
-
 Handles module imports correctly using PYTHONPATH.
 
 Supports running the main application (python main.py) or tests (pytest) inside the container.
@@ -53,7 +50,7 @@ docker build -t router-location-links .
 docker run -itd router-location-links  
 docker exec -it "id" /bin/bash  
 python main.py  
-pytest
+pytest -s
 
 
 Dependencies
@@ -63,3 +60,5 @@ Python 3.11+
 pytest for testing
 
 All dependencies are listed in requirements.txt.
+
+Have attached a pictorial representation - "representation_locations_routers.jpg"
