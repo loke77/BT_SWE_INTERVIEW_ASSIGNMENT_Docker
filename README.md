@@ -56,7 +56,7 @@ pytest -s
 
 **🚀 Running the Task**
 Locally  
-**# Run main logic**
+**# Run main logic** 
 python main.py  
 
 **# Run unit tests**  
