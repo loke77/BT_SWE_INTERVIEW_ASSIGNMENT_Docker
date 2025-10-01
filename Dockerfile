@@ -16,4 +16,4 @@ COPY . .
 #To keep the container running so we can connect and execute the script
 ENTRYPOINT ["tail","-f","/dev/null"]
 
-# Default command: run your script "python", "main.py"
+# Default command: run your script "python main.py"
