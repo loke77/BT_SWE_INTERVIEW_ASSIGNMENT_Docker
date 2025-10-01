@@ -37,12 +37,12 @@ def compute_location_router_links(routers, location_map, router_map):
         router_location = location_map[router["location_id"]]
         for linked_router_id in router["router_links"]:
             linked_location = location_map[router_map[linked_router_id]]
-            if router_location != linked_location:  # skip same-location router_links
-                # Use frozenset to avoid duplicates (A,B) == (B,A)
+            if router_location != linked_location:  # skipping same-location router_links
+                # Using frozenset to avoid duplicates (A,B) == (B,A)
                 pair = frozenset([router_location, linked_location])
                 connections.add(pair)
 
-    # Convert back to tuples for easy printing
+    # Converting back to tuples for easy printing
     return [tuple(pair) for pair in connections]
 
 
@@ -57,7 +57,7 @@ def main():
     router_links = compute_location_router_links(routers, location_map, router_map)
 
     for pair in router_links:
-        # Because frozenset loses order, sort alphabetically for stable output
+        # As frozenset loses order, sorting alphabetically for stable output
         a, b = sorted(pair)
         print(f"{a} <-> {b}")
 
